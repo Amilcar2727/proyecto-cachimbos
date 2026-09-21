@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1h5ia24du347"]
+
+[ext_resource type="Texture2D" uid="uid://brcusp6fsh376" path="res://icon.svg" id="1_j6k8c"]
+[ext_resource type="Script" path="res://Scripts/personaje.gd" id="1_lmp6g"]
+
+[node name="Personaje" type="Node2D"]
+script = ExtResource("1_lmp6g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(590, 350)
+texture = ExtResource("1_j6k8c")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 502.0
+offset_top = 496.0
+offset_right = 676.0
+offset_bottom = 557.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+text = "Presiona!"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
